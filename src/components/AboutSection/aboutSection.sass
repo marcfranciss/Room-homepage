@@ -1,0 +1,63 @@
+@use "../../sass/_index" as *
+
+#s-about
+    .container
+        width: 100%
+        display: flex
+        flex-direction: column
+
+        @include breakpoint(tablet)
+            align-items: center
+        @include breakpoint(desktop)
+            align-items: flex-start
+            flex-direction: row
+
+        .about__dark
+            width: 376px
+            max-width: max-content
+            height: 238px
+            @include breakpoint(tablet)
+                width: 100%
+            @include breakpoint(desktop)
+                width: 100%
+                height: 266px
+
+        .about__text
+            width: 100%
+            padding-top: 49px
+            padding-bottom: 41px
+            padding-inline: 2rem
+            display: flex
+            flex-direction: column
+            gap: 14px
+            @include breakpoint(tablet)
+                width: 100%
+                align-items: center
+                text-align: center
+            @include breakpoint(desktop)
+                width: 580px
+                padding-top: 64px
+                padding-bottom: 0
+                padding-inline: 3rem
+                gap: 12px
+                align-items: flex-start
+                text-align: left
+
+            h2
+                @extend .heading-m
+                color: $primary
+                @include breakpoint(desktop)
+                    letter-spacing: 6.67px
+            p
+                @extend .text-body
+
+        .about__light
+            width: 375px
+            max-width: max-content
+            height: 227px
+            @include breakpoint(tablet)
+                width: 100%
+            @include breakpoint(desktop)
+                width: 100%
+                // width: 440px
+                height: 266px

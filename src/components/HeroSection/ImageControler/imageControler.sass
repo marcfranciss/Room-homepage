@@ -1,0 +1,31 @@
+@use "../../../sass/_index" as *
+
+.hero-img__controller
+    position: absolute
+    right: 0
+    bottom: 0
+    width: 112px
+    height: 56px
+    background-color: trasparent
+    display: flex
+    flex-direction: row
+    align-items: center
+    .btn-controller
+        all: unset
+        height: 100%
+        width: 100%
+        background: $primary
+        display: grid
+        place-content: center
+        cursor: pointer
+        transition: background-color 400ms ease-out
+        &:hover
+            background-color: $hover-bg
+        img
+            will-change: transform
+            transition: transform 100ms
+            transform: scale(1)
+        &:active img
+            transform: scale(0.8)
+        &:focus
+            outline: 2px solid $secondary

@@ -22,13 +22,32 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Navigate the slider using either their mouse/trackpad or keyboard
+- ✅ View the optimal layout for the site depending on their device's screen size
+- ✅ See hover states for all interactive elements on the page
+- ✅ Navigate the slider using either their mouse/trackpad or keyboard
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<details open>
+<summary>🖼️ <b>Desktop</b></summary>
+
+![](./src/assets/screenshots/desktop-screenshot.png)
+
+</details>
+
+<details>
+<summary>🖼️ <b>Tablet Screenshot</b></summary>
+
+![](./src/assets/screenshots/tablet-screenshot.png)
+
+</details>
+
+<details>
+<summary>🖼️ <b>Mobile Screenshot</b></summary>
+
+![](./src/assets/screenshots/mobile-screenshot.png)
+
+</details>
 
 ### Links
 

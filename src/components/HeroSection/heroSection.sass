@@ -1,0 +1,86 @@
+@use "../../sass/_index" as *
+
+#s-hero
+    .container
+        display: flex
+        flex-direction: column
+        padding-bottom: 4.5rem
+        @include breakpoint(desktop)
+            flex-direction: row
+            padding-bottom: 0
+.hero-img
+    position: relative
+    display: flex
+    flex-direction: row
+    overflow-x: hidden
+    @include breakpoint(desktop)
+        width: 58.3333%
+        max-height: 534px
+        .hero-img__controller
+            display: none
+    picture
+        animation: toggle 700ms ease-out
+    picture.show
+        display: block
+    picture.hide
+        display: none
+
+.hero-text
+    display: flex
+    flex-direction: column
+    padding-top: 60px
+    padding-inline: clamp(2rem, 0.5035rem + 6.385vw, 6.25rem)
+    position: relative
+    .hero-img__controller
+        display: none
+    @include breakpoint(desktop)
+        width: 41.6667%
+        padding-top: 120px
+        .hero-img__controller
+            left: 0
+            display: flex
+            width: 160px
+            height: 80px
+    h1
+        @extend .heading-l
+        color: $primary
+        margin-bottom: 15px
+        @include breakpoint(desktop)
+            letter-spacing: -2px
+            margin-bottom: 1.5rem
+    p
+        @extend .text-body
+        color: $accent
+        margin-bottom: 41px
+        @include breakpoint(desktop)
+            margin-bottom: 1.5rem
+    button.btn-shop
+        all: unset
+        width: 232px
+        height: 1rem
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        cursor: pointer
+        span
+            font-size: 15px
+            line-height: 16px
+            letter-spacing: 12.5px
+            font-family: inherit
+            color: $primary
+        span
+            transition: color 400ms ease
+        img
+            transition: filter 400ms ease
+        &:hover
+            span
+                color: $accent
+            img
+                filter: invert(68%) sepia(2%) saturate(9%) hue-rotate(117deg) brightness(93%) contrast(93%)
+
+@keyframes toggle
+    from
+        opacity: 0
+    to
+        opacity: 1

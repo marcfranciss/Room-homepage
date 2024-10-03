@@ -1,0 +1,42 @@
+@font-face
+    font-family: "League Spartan"
+    src: url("/src/assets/fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf") format(truetype)
+
+#root
+    font-family: "League Spartan", sans-serif
+    font-optical-sizing: auto
+    font-style: normal
+
+$heading-l: clamp(2.5rem, 2.3239rem + 0.7512vw, 3rem)
+$heading-m: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem)
+$heading-s: 1.25rem
+$heading-xs: 1rem
+$body: 1rem
+$body-s: 0.75rem
+
+.heading-l
+    font-size: $heading-l
+    font-weight: 600
+    line-height: clamp(2.3125rem, 2.1585rem + 0.6573vw, 2.75rem)
+    letter-spacing: -1.67px
+    color: hsla(0, 0%, 100%, 100%)
+
+.heading-m
+    font-size: $heading-m
+    font-weight: 700
+    line-height: 22px
+    letter-spacing: 5.83px
+    color: hsla(0, 0%, 100%, 100%)
+
+.text-body
+    font-size: $body
+    font-weight: 500
+    line-height: 22px
+    letter-spacing: -0.33px
+    color: hsla(0, 0%, 63%, 100%)
+
+.text-links
+    font-size: 1rem
+    font-weight: 600
+    line-height: 15px
+    letter-spacing: -0.67px
