@@ -8,12 +8,10 @@ export const AboutSection = () => {
     <section id='s-about'>
       <div className='container'>
         <div className='about__dark'>
-          <picture>
-            <LazyLoadImage
-              src={aboutDark}
-              alt='Visualization of furnitures in darker lighting'
-            />
-          </picture>
+          <LazyLoadImage
+            src={aboutDark}
+            alt='Visualization of furnitures in darker lighting'
+          />
         </div>
         <div className='about__text'>
           <h2>ABOUT OUR FURNITURE</h2>
@@ -27,12 +25,10 @@ export const AboutSection = () => {
           </p>
         </div>
         <div className='about__light'>
-          <picture>
-            <LazyLoadImage
-              src={aboutLight}
-              alt='Visualization of furnitures in brighter lighting'
-            />
-          </picture>
+          <LazyLoadImage
+            src={aboutLight}
+            alt='Visualization of furnitures in brighter lighting'
+          />
         </div>
       </div>
     </section>

@@ -4,6 +4,13 @@ import { ImageControler } from "./ImageControler/ImageControler";
 import btnArrow from "../../assets/images/icon-arrow.svg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
+import imgD1 from "../../assets/images/desktop-image-hero-1.jpg";
+import imgD2 from "../../assets/images/desktop-image-hero-2.jpg";
+import imgD3 from "../../assets/images/desktop-image-hero-3.jpg";
+import imgM1 from "../../assets/images/mobile-image-hero-1.jpg";
+import imgM2 from "../../assets/images/mobile-image-hero-2.jpg";
+import imgM3 from "../../assets/images/mobile-image-hero-3.jpg";
+
 interface heroImages {
   alt: string;
   dekstop: string;
@@ -13,18 +20,18 @@ interface heroImages {
 const heroImagesArr = [
   {
     alt: "Stylistic wooden chairs and table",
-    dekstop: "/Room-homepage/src/assets/images/desktop-image-hero-1.jpg",
-    mobile: "/Room-homepage/src/assets/images/mobile-image-hero-1.jpg",
+    dekstop: imgD1,
+    mobile: imgM1,
   },
   {
     alt: "Stylistic plastic chairs",
-    dekstop: "/Room-homepage/src/assets/images/desktop-image-hero-2.jpg",
-    mobile: "/Room-homepage/src/assets/images/mobile-image-hero-2.jpg",
+    dekstop: imgD2,
+    mobile: imgM2,
   },
   {
     alt: "Black foldable chair",
-    dekstop: "/Room-homepage/src/assets/images/desktop-image-hero-3.jpg",
-    mobile: "/Room-homepage/src/assets/images/mobile-image-hero-3.jpg",
+    dekstop: imgD3,
+    mobile: imgM3,
   },
 ];
 
@@ -41,7 +48,7 @@ export const HeroSection = () => {
                 className={currImgIndex === index ? "show" : "hide"}>
                 <source media='(max-width: 767px)' srcSet={images.mobile} />
                 <source media='(min-width: 768px)' srcSet={images.dekstop} />
-                <LazyLoadImage src={images.dekstop} alt={images.alt} />
+                <img src={images.dekstop} alt={images.alt}></img>
               </picture>
             );
           })}
@@ -62,7 +69,7 @@ export const HeroSection = () => {
           </p>
           <button className='btn-shop'>
             <span>SHOP NOW</span>
-            <img src={btnArrow}></img>
+            <LazyLoadImage src={btnArrow} alt='' />
           </button>
           <ImageControler
             setCurrImgIndex={setCurrImgIndex}
